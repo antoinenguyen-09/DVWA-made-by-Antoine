@@ -10,9 +10,9 @@ if(isset($_POST["user"]) && isset($_POST["pass"])){
 	$is_teacher = $perm->is_teacher();    
 	
 	if($is_teacher || $is_student){
+		setcookie("login",base64_encode($user), time() + (86400 * 30), "/");
 		$_SESSION['teacher'] = $is_teacher;
 		$_SESSION['student'] = $is_student;
-		$_SESSION['user'] = $user;
 		header("Location: index.php");
 		die();
 //        $msg = '<h6 class="text-center" style="color:green">Valid Login.</h6>';
