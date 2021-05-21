@@ -29,7 +29,7 @@ else{
             $x++;
         }
     }
-    $sender = $_SESSION['user'];
+    $sender = base64_decode($_COOKIE['login']);
     $content = $_POST['message'];
     // echo $sender." and ".$content." to ".$arr[1];
   
