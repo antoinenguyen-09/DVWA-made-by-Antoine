@@ -6,8 +6,7 @@ if(!isset($_SESSION['teacher']) || !isset($_SESSION['student'])){
     header("Location: login.php");  
 } 
 else{
-    $create = "challenge.php";
-    $play = "answer.php";
+    $user = base64_decode($_COOKIE['login']);
 } 
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ else{
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body> 
-    <h1><?php echo "Welcome ".$_SESSION['user']." to our class!";?></h1> ​
+    <h1><?php echo "Welcome ".$user." to our class!";?></h1> ​
     <a href='list.php'><button type="button" class="btn btn-secondary btn-lg btn-block btn-success">List of students</button></a>
     <?php if($_SESSION['teacher']) echo '<a href="addstu.php"><button type="button" class="btn btn-secondary btn-lg btn-block btn-danger">Add a student</button></a>'; ?>
     <?php if($_SESSION['student']) echo '<a href="view_mess.php"><button type="button" class="btn btn-secondary btn-lg btn-block btn-danger">View message</button></a>'; ?>
