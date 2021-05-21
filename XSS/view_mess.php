@@ -1,6 +1,6 @@
 <?php
    session_start();
-   if(!isset($_SESSION['user']) || !$_SESSION['student']){
+   if(!isset($_COOKIE['login']) || !$_SESSION['student']){
        header("Location: login.php");
    }
 ?>
@@ -43,7 +43,7 @@
        if ($con10->connect_error) {
            die("Connection failed: " . $con10->connect_error);
        }
-       $sql = "SELECT * FROM ".$_SESSION['user']."";
+       $sql = "SELECT * FROM ".base64_decode($_COOKIE['login'])."";
        $result = $con10->query($sql);
        if($result->num_rows > 0){
          while($rows = $result->fetch_assoc()){
@@ -54,5 +54,7 @@
            $msg = "Your box chat empty now!";
        }
     ?>
+
+    <p style="color: red"><?php echo $msg;?></p>
 </table>
 
