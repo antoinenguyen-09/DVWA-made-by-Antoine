@@ -33,7 +33,7 @@ else{
     $content = $_POST['message'];
     // echo $sender." and ".$content." to ".$arr[1];
   
-    $sql = "INSERT INTO ".$arr[1]." (sender,content) VALUES ('$sender','$content')";
+    $sql = "INSERT INTO ".$arr[1]." (sender,content) VALUES ('".$sender."','".$content."')";
     echo $sql;
     if($con9->query($sql)){
         header('Location: sendmess.php?status=success');
