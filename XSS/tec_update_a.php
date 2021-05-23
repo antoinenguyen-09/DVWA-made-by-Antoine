@@ -25,17 +25,6 @@ if(isset($_POST['submit'])){
         header('Location: tec_update.php?phone=error');
     }
     else{
-        $con10 = new mysqli("localhost","kali","kali","class");
-        if ($con10->connect_error) {
-            die("Connection failed: " . $con10->connect_error);
-        } 
-        $stmt = $con10->prepare("SELECT * FROM student WHERE username=?");
-        $stmt->bind_param("s", $_POST['username']);
-        $stmt->execute();
-        if($stmt->fetch() == 1){
-            header('Location: tec_update.php?status=failed');
-        }
-        else{
             $con11 = new mysqli("localhost","kali","kali","class");
             $stmt1 = $con11->prepare('UPDATE student SET username=?, password=?, fullname=?, email=?, phonenum=? WHERE id=?');
             $stmt1->bind_param("ssssss",$_POST['username'],$_POST['pass'],$_POST['fullname'],$_POST['email'],$_POST['phonenum'], $_SESSION['id']);
@@ -61,7 +50,6 @@ if(isset($_POST['submit'])){
             } else {
                 echo 'Failed';
             }
-        }
     }
   } else{
     header('Location: login.php');
