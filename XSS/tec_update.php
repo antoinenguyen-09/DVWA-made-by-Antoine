@@ -1,7 +1,13 @@
 <?php
 session_start();
-if(!isset($_SESSION['teacher']) || !$_SESSION['teacher']){
+if(!isset($_SESSION['teacher']) || !$_SESSION['teacher']  || !isset($_SESSION['user'])){
   header('Location: login.php');
+} else{
+    if(empty($_SESSION['key'])){
+        $_SESSION['key'] = bin2hex(random_bytes(32));
+    }
+    $csrf = hash_hmac('sha256',$_SESSION['user'],$_SESSION['key']);
+    $_SESSION['csrf'] = $csrf;
 }
 
 ?>
@@ -22,8 +28,9 @@ if(!isset($_SESSION['teacher']) || !$_SESSION['teacher']){
 </head>
 <body>
    <div class="signup-form">
-    <form action="tec_update_a.php" method="post" enctype="multipart/form-data">
+    <form action="tec_update_a.php" method="post">
 		<h2>Update student's profile</h2>
+    <input type="hidden" name="csrf" value="<?php echo $csrf;?>">
     <div class="form-group">
          <input type="text" class="form-control" name="username" placeholder="Username" required="required">
 		</div>  
@@ -50,7 +57,7 @@ if(!isset($_SESSION['teacher']) || !$_SESSION['teacher']){
         </div>
         <p style="color: red"><?php if(isset($_GET['confirm']) && $_GET['confirm']=="error") echo "Wrong confirmed password";?></p>       
 		<div class="form-group">
-            <button type="submit" name="save" class="btn btn-success btn-lg btn-block">Update now</button>
+            <button type="submit" name="submit" class="btn btn-success btn-lg btn-block">Update now</button>
         </div>
     </form>
 	 <p style="color: green"><?php if(isset($_GET['status']) && $_GET['status']=="success") { $comeback='<a href="index.php"><button type="button" class="btn btn-secondary">Come back to home page</button></a>'; echo "Adding successfully!"; } ?></p>
