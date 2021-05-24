@@ -4,7 +4,7 @@
 
 #### 1)  Tìm hiểu về XSS:
 
-- **XSS** - **Cross-site Scripting** là một lỗ hổng cho phép attacker can thiệp vào tương tác giữa người dùng và ứng dụng web (thông qua  trình duyệt), phá vỡ chính sách cùng nguồn gốc (Same Origin Policy), từ đó giả mạo victim user, thực hiện bất kỳ hành động nào và truy cập vào bất kỳ dữ liệu nào của người dùng đó. Khai thác tấn công XSS chỉ thực sự xảy ra khi nạn nhân truy cập vào trang web hoặc ứng dụng thực thi các đoạn mã độc, cho nên XSS được gọi là 2 lỗ hổng **client-side**. 
+- **XSS** - **Cross-site Scripting** là một lỗ hổng cho phép attacker can thiệp vào tương tác giữa người dùng và ứng dụng web (thông qua  trình duyệt), phá vỡ chính sách cùng nguồn gốc (Same Origin Policy), từ đó giả mạo victim user, thực hiện bất kỳ hành động nào và truy cập vào bất kỳ dữ liệu nào của người dùng đó. Khai thác tấn công XSS chỉ thực sự xảy ra khi nạn nhân truy cập vào trang web hoặc ứng dụng thực thi các đoạn mã độc, cho nên XSS được gọi là 1 lỗ hổng **client-side**. 
 
 - Các kiểu **XSS**:
 
