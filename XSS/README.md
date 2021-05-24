@@ -1,8 +1,4 @@
-# BÀI 7: LỖI WEB CƠ BẢN - XSS  
-
-|   Người thực hiện    | Tuần |                Chủ đề                |
-| :------------------: | :--: | :----------------------------------: |
-| Nguyễn Cao Huy Hoàng |  2   | Ứng dụng/Web Security/Lỗi web cơ bản |
+# CROSS-SITE SCRIPTING AND ITS ISSUES
 
 ### I. LÝ THUYẾT:
 
