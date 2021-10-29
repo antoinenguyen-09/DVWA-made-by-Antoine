@@ -33,9 +33,9 @@
                <th>Mark</th>
            </tr>
            <?php            
-                $con = new mysqli("localhost","kali","kali","class");
+                $con = new mysqli(,,,);  // servername, username, password, databasename (database = "class")
                 if ($con->connect_error) {
-                  die("Connection failed: " . $con3->connect_error);
+                  die("Connection failed: " . $con->connect_error);
                 }
                 $sql = 'SELECT id, fullname FROM '.$_GET['classID'];
                 $result = $con->query($sql);   
