@@ -33,7 +33,7 @@
                <th>Mark</th>
            </tr>
            <?php            
-                $con = new mysqli(,,,);  // servername, username, password, databasename (database = "class")
+                $con = new mysqli('localhost', 'root', '', 'class');  // servername, username, password, databasename (database = "class")
                 if ($con->connect_error) {
                   die("Connection failed: " . $con->connect_error);
                 }
@@ -53,7 +53,7 @@
         var url = new URL(document.location);
         var classID = url.searchParams.get('classID');
         var studentID = document.getElementById('studentID').innerText;
-        window.location.replace('http://localhost:4000/mark.php?studentID='+studentID+'&classID='+classID);
+        window.location.replace('/mark.php?studentID='+studentID+'&classID='+classID);
     }
 </script>
 </body>
