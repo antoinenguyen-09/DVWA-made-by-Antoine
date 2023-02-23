@@ -10,3 +10,7 @@
 
 
 ### 3. Vào folder challenge, ví dụ: `cd cmdsqli/` sau đó gõ `php -S 0.0.0.0:5000` để chạy. Truy cập web tại `http://<địa chỉ IP của máy đang chạy PHP>:5000`.
+
+![image](https://user-images.githubusercontent.com/61876488/220871921-cefc15be-6a20-4691-8a11-546489e5fda6.png)
+
+![image](https://user-images.githubusercontent.com/61876488/220872003-29552138-b517-46cc-b4ee-4d6435789479.png)
