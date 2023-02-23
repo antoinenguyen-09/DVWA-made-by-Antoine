@@ -1,6 +1,6 @@
 # Usage
 
-### 1. Yêu cầu: tải về [Ubuntu 20.04.5 LTS](https://releases.ubuntu.com/focal/ubuntu-20.04.5-desktop-amd64.iso). Trong Ubuntu 20.04.5 LTS thường đã có đủ LAMP (Linux, Apache 2, MySQL 8.0.32 và PHP 7.4), nếu thiếu thì search google sudo apt install <cái gì đó muốn tải rồi copy lệnh vào mà tải về>.
+### 1. Yêu cầu: tải về [Ubuntu 20.04.5 LTS](https://releases.ubuntu.com/focal/ubuntu-20.04.5-desktop-amd64.iso). Trong Ubuntu 20.04.5 LTS thường đã có đủ LAMP (Linux, Apache 2, MySQL 8.0.32 và PHP 7.4), nếu thiếu thì search google "sudo apt install <cái gì đó muốn tải rồi copy lệnh vào mà tải về>". Tải repo này về máy bằng lệnh `git clone https://github.com/antoinenguyen-09/DVWA-made-by-Antoine.git`.
 
 ![image](https://user-images.githubusercontent.com/61876488/220865105-4d47cc2a-3a3a-4ff6-abf1-920e0a277660.png)
 
