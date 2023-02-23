@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/61876488/220865105-4d47cc2a-3a3a-4ff6-abf1-920e0a277660.png)
 
-### 2. Bật dịch vụ MySQL bằng lệnh: `service mysql start` (nếu đang chạy mà gặp vấn đề thì `service mysql restart`). Tại đường dẫn `DVWA-made-by-Antoine/` vào MySQL Shell bằng lệnh `sudo mysql -u root -p` sau đó nhập mật khẩu ubuntu ở ô `[sudo] password for xxx`. Chỗ `Enter password: ` với các bạn mới cài mysql thì mặc định root chưa có mật khẩu nên cứ ấn Enter (ONLY ENTER). Sau đó `source <script>.sql` on MySQL shell.
+### 2. Bật dịch vụ MySQL bằng lệnh: `service mysql start` (nếu đang chạy mà gặp vấn đề thì `service mysql restart`). Tại đường dẫn `DVWA-made-by-Antoine/` vào MySQL Shell bằng lệnh `sudo mysql -u root -p` sau đó nhập mật khẩu ubuntu ở ô `[sudo] password for xxx`. Chỗ `Enter password: ` với các bạn mới cài mysql thì mặc định root chưa có mật khẩu nên cứ ấn Enter (ONLY ENTER). Sau đó `source <script>.sql` trên MySQL shell.
 
 ![image](https://user-images.githubusercontent.com/61876488/220865549-dd653d94-ffca-4aa0-8924-8acf8bf9eb45.png)
 
