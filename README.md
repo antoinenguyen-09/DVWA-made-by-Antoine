@@ -14,3 +14,5 @@
 ![image](https://user-images.githubusercontent.com/61876488/220872113-1a372220-e694-46e1-b2f0-4a2040596627.png)
 
 ![image](https://user-images.githubusercontent.com/61876488/220872003-29552138-b517-46cc-b4ee-4d6435789479.png)
+
+### Note: vào bài lab nào thì chạy `php -S 0.0.0.0:5000` ở đó. Ví dụ muốn làm bài `cmdsqli` thì `cd cmdsqli/` rồi `php -S 0.0.0.0:5000`. Ngoài ra các bạn có thể chơi bài `XSS`.
